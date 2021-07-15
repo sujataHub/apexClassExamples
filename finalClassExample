@@ -1,0 +1,16 @@
+public class myCls {
+	static final Integer PRIVATE_INT_CONST = 200;
+    static final Integer PRIVATE_INT_CONST2;
+    
+    public static Integer calculate() {
+        system.debug('PRIVATE_INT_CONST222 -->>'+PRIVATE_INT_CONST2); //first time -- null //second call -- 9
+        system.debug('PRIVATE_INT_CONST11 -->>'+PRIVATE_INT_CONST);  //first time -- 200 //second call -- 200
+        return 2+7;
+        
+    }
+    static {
+        PRIVATE_INT_CONST2 = calculate();
+        system.debug('PRIVATE_INT_CONST2 -->>'+PRIVATE_INT_CONST2); //9
+        system.debug('PRIVATE_INT_CONST -->>'+PRIVATE_INT_CONST); //200
+    }
+}
